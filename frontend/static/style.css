@@ -1,0 +1,259 @@
+:root {
+  --blue-900: #001b66;
+  --blue-500: #2b59a5;
+  --blue-300: #cfe0ff;
+  --ink: #1b2b52;
+  --bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: var(--bg);
+  font-family: "Poppins", sans-serif;
+  color: var(--ink);
+}
+
+.wrap {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left {
+  flex: 0 0 60%;
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-inner {
+  width: 90%;
+  max-width: 920px;
+  margin-top: -8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  justify-content: flex-start;
+}
+.title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #2a56a6;
+  letter-spacing: 0.25px;
+}
+
+.form {
+  width: 100%;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 760px;
+  gap: 22px 40px;
+  margin: 0 auto 26px auto;
+}
+
+.form input {
+  width: 100%;
+  height: 52px;
+  border-radius: 26px;
+  border: 2px solid var(--blue-300);
+  padding: 0 18px;
+  font-size: 16px;
+  color: #224a8d;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 4px 0 rgba(118, 151, 203, 0.26),
+    inset 0 2px 0 rgba(18, 44, 103, 0.1);
+}
+.form input::placeholder {
+  color: #6e8fcb;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.password-wrapper input {
+  width: 100%;
+  padding-right: 45px;
+}
+.password-wrapper .toggle {
+  position: absolute;
+  right: 18px;
+  cursor: pointer;
+  user-select: none;
+  color: #2b59a5;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.password-wrapper .toggle:hover {
+  opacity: 1;
+}
+.password-wrapper .eye.closed {
+  display: none;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 18px;
+}
+.btn {
+  max-width: 360px;
+  width: 100%;
+  height: 58px;
+  border: none;
+  border-radius: 30px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--blue-500);
+  box-shadow: 0 12px 0 #8aa3cc;
+  cursor: pointer;
+  transition: transform 0.08s ease-in;
+}
+.btn:active {
+  transform: translateY(2px);
+}
+.msg {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #2b59a5;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.corner-bubble {
+  position: absolute;
+  left: -60px;
+  bottom: -60px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--blue-900);
+}
+
+.bridge-ball {
+  position: absolute;
+  top: -64px;
+  right: -70px;
+  width: 180px;
+  height: 160px;
+  border-radius: 70%;
+  background: var(--blue-900);
+  filter: none;
+  z-index: 2;
+}
+
+.pings {
+  position: absolute;
+  top: 81px;
+  right: 102px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transform: none;
+  z-index: 3;
+}
+
+.pings span {
+  background: var(--blue-900);
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+.pings span:nth-child(1) {
+  width: 8px;
+  height: 8px;
+  transform: translateY(-8px);
+}
+
+.pings span:nth-child(2) {
+  width: 25px;
+  height: 25px;
+  transform: translateY(2px);
+}
+
+.right {
+  flex: 0 0 40%;
+  background: var(--blue-900);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 79%;
+  height: auto;
+  object-fit: contain;
+  object-position: 45% bottom;
+  display: block;
+}
+
+@media (max-width: 1300px) {
+  .grid-2 {
+    max-width: 680px;
+    gap: 20px 30px;
+  }
+  .btn,
+  .msg {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .wrap {
+    flex-direction: column;
+  }
+  .right {
+    min-height: 52vh;
+  }
+  .left-inner {
+    width: 90%;
+    padding: 40px 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .header {
+    justify-content: center;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+    max-width: 100%;
+    margin: 0 auto 26px auto;
+  }
+  .btn-row {
+    max-width: 100%;
+  }
+  .btn,
+  .msg {
+    max-width: 100%;
+  }
+  .title {
+    font-size: 44px;
+  }
+}
