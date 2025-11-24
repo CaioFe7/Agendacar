@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --blue-900: #1A1F47;
+  --blue-500: #2b59a5;
+  --blue-300: #cfe0ff;
+  --ink: #1b2b52;
+  --bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* LADO POSTER */
+.left-side {
+  flex: 0 0 45%;
+  background-color: var(--blue-900);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.left-side .logo img {
+  width: 480px;
+  margin-bottom: 30px;
+}
+
+.car-img {
+  max-width: 85%;
+  height: auto;
+}
+
+/* LADO LOGIN */
+
+.right-side {
+  flex: 0 0 55%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 80px;
+}
+
+.right-side h1 {
+  color: var(--blue-500);
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+form {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* INPUTS */
+.input-box {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 52px;
+  border-radius: 26px;
+  border: 2px solid var(--blue-300);
+  padding: 0 18px;
+  font-size: 15px;
+  color: #224a8d;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 4px 0 rgba(118, 151, 203, 0.26),
+  inset 0 2px 0 rgba(18, 44, 103, 0.1);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-box input::placeholder {
+  color: #6e8fcb;
+}
+
+/* SENHA COM OLHO */
+
+.input-box.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-box.password-wrapper input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.input-box.password-wrapper .toggle {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: .8;
+  display: flex;
+  transition: 0.2s;
+}
+
+.input-box.password-wrapper .toggle:hover {
+  opacity: 1;
+}
+
+.input-box.password-wrapper .eye.closed {
+  display: none;
+}
+
+/* BOTÃO LOGIN */
+
+.btn-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.btn {
+  width: 80%;
+  height: 58px;
+  background: var(--blue-500);
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 4px 0 #8aa3cc;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 8px 0 #8aa3cc;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.options a {
+  color: var(--blue-500);
+}
+
+.register {
+  margin-top: 20px;
+  font-size: 15px;
+}
