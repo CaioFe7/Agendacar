@@ -1,0 +1,78 @@
+{
+  "intents": [
+    {
+      "tag": "saudacao",
+      "patterns": ["oi", "olá", "ola", "hey", "bom dia", "boa tarde", "boa noite", "tudo bem", "oi tudo bem", "olá tudo bom", "hello", "boa"],
+      "responses": [
+        "Olá! 👋 Seja bem-vindo ao AgendaCar! Como posso ajudar?",
+        "Oi! Estou aqui para ajudar com sua reserva. O que você precisa?",
+        "Olá! Bem-vindo ao AgendaCar. Em que posso ser útil?"
+      ]
+    },
+    {
+      "tag": "precos",
+      "patterns": ["quanto custa", "preço", "valor", "quanto fica", "preço dos carros", "tabela de preços", "quanto é", "qual o preço", "caro", "barato", "diária"],
+      "responses": [
+        "Nossos preços: 🏎️ Porsche 911: R$3.500/dia | 🚙 T-Cross: R$200/dia | 🚗 Civic Type-R: R$3.500/dia | 🛻 Silverado: R$800/dia.",
+        "Os valores são: Porsche 911 e Civic Type-R R$3.500/dia, Silverado R$800/dia e T-Cross R$200/dia. O T-Cross é o mais acessível!"
+      ]
+    },
+    {
+      "tag": "disponibilidade",
+      "patterns": ["tem carro disponível", "quais carros têm", "carros disponíveis", "está disponível", "tem disponível", "carros livres", "disponibilidade"],
+      "responses": [
+        "Temos 4 modelos: Porsche 911, T-Cross, Civic Type-R e Silverado. Acesse a Home para ver o status de disponibilidade em tempo real!",
+        "Para ver disponibilidade, acesse a página de carros. Os cards mostram se cada modelo está disponível. 😊"
+      ]
+    },
+    {
+      "tag": "tipos_carro",
+      "patterns": ["que tipos de carro", "categorias", "que modelos tem", "modelos disponíveis", "quais carros vocês têm", "que carros", "modelos"],
+      "responses": [
+        "Temos: 🏎️ Sport (Porsche 911, Civic Type-R), 🚙 SUV (T-Cross) e 🛻 Picape (Silverado). Algum te interessa?",
+        "Nossos modelos: Porsche 911 (Sport), T-Cross (SUV), Civic Type-R (Sport) e Silverado (Picape). Diversidade para todos os gostos!"
+      ]
+    },
+    {
+      "tag": "como_reservar",
+      "patterns": ["como reservar", "quero alugar", "como alugar", "como faço para reservar", "processo de reserva", "etapas para alugar", "reservar"],
+      "responses": [
+        "Para reservar: 1️⃣ Faça login, 2️⃣ Escolha o carro na Home, 3️⃣ Clique em 'Ver detalhes', 4️⃣ Selecione as datas e 5️⃣ Confirme a reserva!",
+        "É simples! Acesse o site logado, clique no carro desejado, defina as datas de retirada e devolução, e finalize. 🚗"
+      ]
+    },
+    {
+      "tag": "cancelar",
+      "patterns": ["cancelar reserva", "como cancelo", "quero cancelar", "desistir da reserva", "cancelamento", "cancelar"],
+      "responses": [
+        "Para cancelar: acesse 'Minhas Reservas' no menu, localize a reserva e clique em 'Cancelar'. Simples assim! 🗑️",
+        "Você pode cancelar qualquer reserva ativa na página 'Minhas Reservas'. É só um clique!"
+      ]
+    },
+    {
+      "tag": "horario",
+      "patterns": ["horário de funcionamento", "que horas funciona", "horário de atendimento", "quando funciona", "aberto até que horas", "horário"],
+      "responses": [
+        "O AgendaCar funciona 24h pelo site! 🕐 As reservas podem ser feitas a qualquer hora.",
+        "Estamos disponíveis 24 horas por dia, 7 dias por semana. Reserve quando quiser! 😄"
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": ["tchau", "até logo", "até mais", "obrigado", "valeu", "ótimo", "certo", "ok", "bye", "flw", "falou"],
+      "responses": [
+        "Até logo! Boa viagem com o AgendaCar! 🚗💨",
+        "Obrigado por usar o AgendaCar! Qualquer dúvida, estarei aqui. 😊",
+        "Até mais! Se precisar de algo, só chamar. 👋"
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": [
+        "Hmm, não entendi muito bem. Posso ajudar com preços, reservas, modelos de carros ou cancelamentos!",
+        "Desculpe, não compreendi. Tente perguntar sobre: preços, carros disponíveis, como reservar ou cancelar."
+      ]
+    }
+  ]
+}
