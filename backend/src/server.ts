@@ -1,8 +1,11 @@
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
+import dotenv from 'dotenv';
+import express, { Request, Response } from 'express';
+import cors from 'cors';
+
+dotenv.config();
+
 const sequelize = require('./config/database');
-require('./models'); // carrega modelos e define os relacionamentos
+require('./models');
 
 const usuarioRoutes = require('./routes/usuarioRoutes');
 const carroRoutes = require('./routes/carroRoutes');
@@ -19,17 +22,23 @@ app.use('/carros', carroRoutes);
 app.use('/reservas', reservaRoutes);
 app.use('/chatbot', chatbotRoutes);
 
-app.get('/health', (_, res) => res.json({ status: 'ok', timestamp: new Date() }));
+app.get('/health', (_req: Request, res: Response) => {
+  return res.json({
+    status: 'ok',
+    timestamp: new Date()
+  });
+});
 
 const PORT = process.env.PORT || 3001;
 
-// alter:true atualiza as tabelas sem apagar dados existentes
 sequelize
   .sync({ alter: true })
   .then(() => {
     console.log('✅ Banco sincronizado.');
-    app.listen(PORT, () =>
-      console.log(`🚀 Servidor rodando em http://localhost:${PORT}`)
-    );
+    app.listen(PORT, () => {
+      console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
+    });
   })
-  .catch(err => console.error('❌ Erro ao conectar ao banco:', err));
+  .catch((err: Error) => {
+    console.error('❌ Erro ao conectar ao banco:', err);
+  });
